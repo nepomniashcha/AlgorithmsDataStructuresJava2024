@@ -3,7 +3,7 @@ package LinkedList;
 public class Solution {
     public static String mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode list = new ListNode();
-        ListNode head = list;
+        final ListNode head = list;
 
         if (list1.val != -101 && list2.val != -101) { 
             ListNode temp = new ListNode();

@@ -11,8 +11,6 @@ public class ListNode {
     public String toString() {
         ListNode curr = this;
         StringBuilder sb = new StringBuilder();
-        if (curr.val == -101) { return "[]"; }
-
         sb.append("[");
         while (curr != null) {
             sb.append(curr.val);
