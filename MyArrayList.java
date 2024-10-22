@@ -1,6 +1,8 @@
-import java.util.*;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.ArrayList;
 
-public class ArrayList {
+public class MyArrayList {
     public static void main(String[] args) {
         ArrayList<String> colours = new ArrayList<>();
         
