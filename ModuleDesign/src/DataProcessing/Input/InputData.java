@@ -1,5 +1,5 @@
 package DataProcessing.Input;
 
 public interface InputData {
-    public void getData();
+    public void readData();
 }
