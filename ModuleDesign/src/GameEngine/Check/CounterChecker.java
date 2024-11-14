@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 import GameEngine.IntoArray.IntegerIntoArray;
 
-public class Counter implements Checker {
+public class CounterChecker implements Checker {
     private ArrayList<Integer> computer_number = new ArrayList<>();
     private ArrayList<Integer> user_number = new ArrayList<>();
     private HashMap<String, Integer> map = new HashMap<>();

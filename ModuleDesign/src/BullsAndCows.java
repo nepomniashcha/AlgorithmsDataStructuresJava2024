@@ -1,19 +1,19 @@
 
-import GameEngine.Check.Counter;
-import GameEngine.Guess.GuessMultiDigitNumber;
-import Player.User;
+import GameEngine.Check.CounterChecker;
+import GameEngine.Guess.MultiDigitGuessNumber;
+import Player.HumanPlayer;
 
 import java.util.HashMap;
 
 public class BullsAndCows {
     public static void main(String[] args) {
-        Integer computerZagadal = new GuessMultiDigitNumber().guess(1000, 9999);
+        Integer computerZagadal = new MultiDigitGuessNumber().guess(1000, 9999);
         System.out.println("Enter number:");
-        User myUser = new User();
+        HumanPlayer myUser = new HumanPlayer();
         Integer number = myUser.makeMove();
 
         while (!number.equals(computerZagadal)) {
-            Counter c = new Counter();
+            CounterChecker c = new CounterChecker();
             HashMap<String, Integer> map = c.countBullsAndCows(computerZagadal, number);
 
             System.out.println("Bulls: " + map.get("bulls"));
