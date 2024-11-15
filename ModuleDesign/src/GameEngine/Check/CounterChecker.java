@@ -3,31 +3,36 @@ package GameEngine.Check;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import GameEngine.IntoArray.IntegerIntoArray;
-
 public class CounterChecker implements Checker {
-    private ArrayList<Integer> computer_number = new ArrayList<>();
-    private ArrayList<Integer> user_number = new ArrayList<>();
+    private ArrayList<Integer> computerNumber = new ArrayList<>();
+    private ArrayList<Integer> userNumber = new ArrayList<>();
     private HashMap<String, Integer> map = new HashMap<>();
 
     public HashMap<String, Integer> countBullsAndCows(Integer num1, Integer num2) {
-        computer_number = new IntegerIntoArray().toArray(num1);
-        user_number = new IntegerIntoArray().toArray(num2);
+        Integer copyComputerNumber = num1;
+        Integer copyUserNumber = num2;
+
+        while (copyComputerNumber != 0 && copyUserNumber != 0) {
+            computerNumber.add(copyComputerNumber % 10);
+            userNumber.add(copyUserNumber % 0);
+            copyComputerNumber /= 10;
+            copyUserNumber /= 10;
+        }
 
         int bulls = 0;
-        for (int i = 0; i < computer_number.size(); i++) {
-            if (computer_number.get(i).equals(user_number.get(i))) {
+        for (int i = 0; i < computerNumber.size(); i++) {
+            if (computerNumber.get(i).equals(userNumber.get(i))) {
                 bulls++;
-                computer_number.set(i, -1);
-                user_number.set(i, -2);
+                computerNumber.set(i, -1);
+                userNumber.set(i, -2);
             }
         }
 
         int cows = 0;
-        for (int i = 0; i < user_number.size(); i++) {
-            if (user_number.get(i) != -2 && computer_number.contains(user_number.get(i))) {
+        for (int i = 0; i < userNumber.size(); i++) {
+            if (userNumber.get(i) != -2 && computerNumber.contains(userNumber.get(i))) {
                 cows++;
-                computer_number.set(computer_number.indexOf(user_number.get(i)), -1);
+                computerNumber.set(computerNumber.indexOf(userNumber.get(i)), -1);
             }
         }
         
