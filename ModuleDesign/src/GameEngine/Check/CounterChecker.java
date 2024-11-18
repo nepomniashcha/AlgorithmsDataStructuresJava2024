@@ -14,7 +14,7 @@ public class CounterChecker implements Checker {
 
         while (copyComputerNumber != 0 && copyUserNumber != 0) {
             computerNumber.add(copyComputerNumber % 10);
-            userNumber.add(copyUserNumber % 0);
+            userNumber.add(copyUserNumber % 10);
             copyComputerNumber /= 10;
             copyUserNumber /= 10;
         }
