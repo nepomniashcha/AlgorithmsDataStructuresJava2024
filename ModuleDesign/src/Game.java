@@ -6,22 +6,28 @@ import Player.NewPlayer;
 
 import java.util.HashMap;
 
-public class Game {
-    public Game (NewPlayer myUser, GuessNumber guessNumber) {
+public class Game<T extends NewPlayer> {
+    public Game (T player, GuessNumber guessNumber) {
         Integer randomizedNumber = new MultiDigitGuessNumber().guess(1000, 9999);
-        System.out.println("Enter number:");
-        Integer number = myUser.makeMove();
+        System.out.println("Good luck!");
 
-        while (!number.equals(randomizedNumber)) {
-            CounterChecker c = new CounterChecker();
-            HashMap<String, Integer> map = c.countBullsAndCows(randomizedNumber, number);
-
-            System.out.println("Bulls: " + map.get("bulls"));
-            System.out.println("Cows: " + map.get("cows"));
-
+        while (true) {
             System.out.println("Enter number:");
-            number = myUser.makeMove();
+            String number = player.makeMove();
+            Integer userNumber = Integer.parseInt(number);
+
+            if (!userNumber.equals(randomizedNumber)) {
+                System.out.println("Try again...");
+                CounterChecker checker = new CounterChecker();
+                HashMap<String, Integer> map = checker.countBullsAndCows(randomizedNumber, userNumber);
+
+                System.out.println("Bulls: " + map.get("bulls"));
+                System.out.println("Cows: " + map.get("cows"));
+            } else {
+                break;
+            }
         }
+        
         System.out.println("You win!");
         // scanner.close();
     }
