@@ -1,6 +1,6 @@
-import GameEngine.Guess.MultiDigitGuessNumber;
-import Player.ComputerPlayer;
-import Player.HumanPlayer;
+import game_engine.Guess.MultiDigitGuessNumber;
+import player.ComputerPlayer;
+import player.HumanPlayer;
 
 public class BullsAndCows {
     public static void main(String[] args) {

@@ -1,8 +1,12 @@
-package Player;
+package player;
 
-import GameEngine.Check.CounterChecker;
 import java.util.*;
 
-public class ComputerPlayer implements NewPlayer {
+import game_engine.Check.CounterChecker;
 
+public class ComputerPlayer implements NewPlayer {
+    @Override
+    public String makeMove() {
+        return "";
+    }
 }

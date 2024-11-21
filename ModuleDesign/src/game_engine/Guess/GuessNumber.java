@@ -1,4 +1,4 @@
-package GameEngine.Guess;
+package game_engine.Guess;
 
 public interface GuessNumber {
     public Integer guess(Integer num1, Integer num2);

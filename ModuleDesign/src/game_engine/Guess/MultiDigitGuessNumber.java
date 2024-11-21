@@ -1,4 +1,4 @@
-package GameEngine.Guess;
+package game_engine.Guess;
 import java.lang.Math;
 
 public class MultiDigitGuessNumber implements GuessNumber {
