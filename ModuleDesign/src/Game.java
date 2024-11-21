@@ -1,7 +1,7 @@
 
-import game_engine.Check.CounterChecker;
-import game_engine.Guess.GuessNumber;
-import game_engine.Guess.MultiDigitGuessNumber;
+import game_engine.check.CounterChecker;
+import game_engine.guess.GuessNumber;
+import game_engine.guess.MultiDigitGuessNumber;
 import player.NewPlayer;
 
 import java.util.HashMap;

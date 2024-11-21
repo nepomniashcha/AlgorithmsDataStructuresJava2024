@@ -1,4 +1,4 @@
-import game_engine.Guess.MultiDigitGuessNumber;
+import game_engine.guess.MultiDigitGuessNumber;
 import player.ComputerPlayer;
 import player.HumanPlayer;
 

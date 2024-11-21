@@ -1,4 +1,4 @@
-package game_engine.Check;
+package game_engine.check;
 
 import java.util.HashMap;
 

@@ -1,6 +1,6 @@
 package player;
 
-import data_processing.Input.ConsoleInputData;
+import data_processing.input.ConsoleInputData;
 
 public class HumanPlayer implements NewPlayer {
     public String makeMove() {

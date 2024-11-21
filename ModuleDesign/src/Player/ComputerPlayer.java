@@ -2,7 +2,7 @@ package player;
 
 import java.util.*;
 
-import game_engine.Check.CounterChecker;
+import game_engine.check.CounterChecker;
 
 public class ComputerPlayer implements NewPlayer {
     @Override

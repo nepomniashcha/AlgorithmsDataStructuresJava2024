@@ -1,4 +1,4 @@
-package data_processing.Input;
+package data_processing.input;
 
 import java.util.Scanner;
 
