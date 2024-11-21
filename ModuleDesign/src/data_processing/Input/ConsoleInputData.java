@@ -19,7 +19,7 @@ public class ConsoleInputData implements InputData {
                 }
             
                 if (!input.matches("^[1-9][0-9]{3}$")) {
-                    System.out.println("The number cannot begin with 0. Please enter your number again:");
+                    System.out.println("0 as a first digit... Please enter your number again:");
                     input = scanner.nextLine();
                     continue;
                 }
