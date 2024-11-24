@@ -20,19 +20,25 @@ public class PermutationCalculator implements Permutation {
             result.add(new ArrayList<>(prefix)); // Добавляем готовую перестановку
         } else {
             for (int i = 0; i < remaining.size(); i++) {
+                // Пропускаем перестановки, начинающиеся с 0
+                if (prefix.isEmpty() && remaining.get(i) == 0) {
+                    continue;
+                }
+    
                 // Копируем текущий список, исключая выбранный элемент
                 List<Integer> newRemaining = new ArrayList<>(remaining);
                 Integer current = newRemaining.remove(i);
-
+    
                 // Добавляем текущий элемент к префиксу
                 List<Integer> newPrefix = new ArrayList<>(prefix);
                 newPrefix.add(current);
-
+    
                 // Рекурсивный вызов
                 generatePermutations(newPrefix, newRemaining, result);
             }
         }
     }
+    
 }
 
 

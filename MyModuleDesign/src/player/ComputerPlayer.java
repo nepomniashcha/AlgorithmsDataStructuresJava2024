@@ -53,6 +53,11 @@ public class ComputerPlayer implements NewPlayer {
 
             // Если проверены все цифры от 1 до 9, начинаем перестановки
             if (currentDigit > 9) {
+                if (detectedDigits.size() < 4) {
+                    for (int i = 0; i < 4 - detectedDigits.size(); i++) {
+                        detectedDigits.add(0); 
+                    }
+                }
                 digitsDetected = true;
                 // Используем экземпляр PermutationCalculator для вычисления перестановок
                 permutations = permutationCalculator.calculatePermutations(detectedDigits);
