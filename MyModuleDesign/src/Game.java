@@ -2,6 +2,7 @@
 import game_engine.check.CounterChecker;
 import game_engine.guess.GuessNumber;
 import game_engine.guess.MultiDigitGuessNumber;
+import player.ComputerPlayer;
 import player.NewPlayer;
 
 import java.util.HashMap;
@@ -23,6 +24,8 @@ public class Game<T extends NewPlayer> {
 
                 System.out.println("Bulls: " + map.get("bulls"));
                 System.out.println("Cows: " + map.get("cows"));
+
+                ((ComputerPlayer) player).analyzeResponse(map);
             } else {
                 break;
             }
