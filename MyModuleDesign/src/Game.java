@@ -25,7 +25,10 @@ public class Game<T extends NewPlayer> {
                 System.out.println("Bulls: " + map.get("bulls"));
                 System.out.println("Cows: " + map.get("cows"));
 
-                ((ComputerPlayer) player).analyzeResponse(map);
+                if (player instanceof ComputerPlayer computerPlayer) {
+                    computerPlayer.analyzeResponse(map);
+                }
+                
             } else {
                 break;
             }
