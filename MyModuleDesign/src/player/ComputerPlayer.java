@@ -46,7 +46,8 @@ public class ComputerPlayer implements NewPlayer {
 
             if (currentDigit > 9) {
                 if (detectedDigits.size() < 4) {
-                    for (int i = 0; i < 4 - detectedDigits.size(); i++) {
+                    int length = 4 - detectedDigits.size();
+                    for (int i = 0; i < length; i++) {
                         detectedDigits.add(0); 
                     }
                 }
